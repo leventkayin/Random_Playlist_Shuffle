@@ -35,7 +35,9 @@ p1
 # But if we add the genres to the mix we can see a problem appearing, songs from the same genre keep repeating
 # You can run the code a several times and will see that the same problem keeps reappearing
 
-p2 =  qplot(x = shuffled_playlist[,1], y = seq.int(1,1,length.out = number_songs), geom = "point",color = shuffled_playlist[,2]) + geom_point(size = 5)
+p2 =  qplot(x = shuffled_playlist[,1], y = seq.int(1,1,length.out = number_songs),
+            geom = "point",color = shuffled_playlist[,2],
+            main = "Shuffled Song Genres",xlab = "Position",ylab = "") + geom_point(size = 5) + guides(color = guide_legend(title = "Genres"))
 p2
 
  
